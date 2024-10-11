@@ -5,6 +5,7 @@ const temail = document.getElementById("email");
 const logForm = document.querySelector('.login');
 const regForm = document.querySelector('.register');
 const holder = document.querySelector('.log');
+const logme = document.querySelector('.logme');
 const btns = document.querySelector('.Btns');
 
 menuToggle.addEventListener('change', () => {
@@ -19,6 +20,10 @@ menuToggle.addEventListener('change', () => {
 const usernames = ["akihiroakio47@gmail.com", "judeko@gmail.com"];
 const passwords = ["12345", "9851"];
 
+logme.addEventListener('click', (e) => {
+  holder.style.display = 'block';
+})
+
 btns.addEventListener('click', (e) => {
   const email = temail.value;
   const password = tpass.value;
@@ -29,7 +34,7 @@ btns.addEventListener('click', (e) => {
   } else if (!Checker(email, password)) {
     swal("Error", "Incorrect Email or Password.", "error");
   } else if (email !== '' && password !== '') {
-    logForm.style.display = 'none';
+    // logForm.style.display = 'none';
     holder.style.display = 'none';
     loginSuccess();
   } else {
@@ -54,4 +59,10 @@ function isValidEmail(email) {
 
 function loginSuccess() {
   swal("Success", "You have successfully logged in.", "success");
+}
+
+document.onkeydown = function keyPress(e) {
+  if(e.key === "Escape") {
+    holder.style.display = 'none';
+  }
 }
