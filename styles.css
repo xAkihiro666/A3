@@ -386,6 +386,37 @@ h3 {
 	box-shadow: 0 0 5px white, 0 0 10px white;
 }
 
+.click-me {
+	position: absolute;
+    background-color: rgba(0, 43, 83, .9);
+	font-weight: 700;
+    color: white;
+    padding: 10px;
+    width: 500px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.right {
+	top: 50%;
+    left: -500px;
+    transform: translateY(-50%);
+}
+
+.left {
+	top: 58%;
+    left: 250px;
+    transform: translateY(-50%);
+}
+
+.hov-me:hover .click-me{
+	opacity: 1;
+    pointer-events: auto;
+}
+
 @media (max-width: 768px) {
 	.nav-links {
 		display: none;
