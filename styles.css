@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
+	text-decoration: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
@@ -148,7 +149,7 @@ input {
 	margin: 0;
 }
 
-button {
+.Btns {
 	text-transform: uppercase;
 	margin-top: 50px;
 	width: 100%;
@@ -161,7 +162,7 @@ button {
 	transition: all .5s ease;
 }
 
-button:hover {
+.Btns:hover {
 	background-color: #002b53;
 	box-shadow: 0 0 5px white, 0 0 10px white;
 }
@@ -275,10 +276,6 @@ button:hover {
 	transform: scale(1.1);
 }
 
-footer {
-	background-color: #002b53;
-}
-
 .socials {
 	display: flex;
 	gap: 200px;
@@ -287,6 +284,7 @@ footer {
 	font-size: 2em;
 	padding: 10px;
 	flex-direction: row-reverse;
+	background-color: #002b53;
 }
 
 .bg2_content {
@@ -415,6 +413,60 @@ h3 {
 .hov-me:hover .click-me{
 	opacity: 1;
     pointer-events: auto;
+}
+
+
+.cookies {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	color: white;
+    bottom: 0;
+    background-color: black;
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+	border-bottom-style: outset;
+	z-index: 2;
+}
+
+.cookies img {
+	width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: flex;
+    margin-left: 5%;
+	vertical-align: bottom;
+}
+
+.kerv-container {
+	margin: 10px;
+	font-family: system-ui;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	gap: 10px;
+}
+
+.agree {
+	background-color: #002b53;
+	border-radius: 20px;
+	padding: 10px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	transition: all 0.3s ease;
+	border: none;
+
+}
+
+.agree:hover {
+	background-color: rgba(0, 0, 0);
+}
+
+.agree:active {
+	background-color: grey;
 }
 
 @media (max-width: 768px) {

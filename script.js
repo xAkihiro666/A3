@@ -7,6 +7,8 @@ const regForm = document.querySelector('.register');
 const holder = document.querySelector('.log');
 const logme = document.querySelector('.logme');
 const btns = document.querySelector('.Btns');
+const agree = document.querySelector('.agree');
+const cookies = document.querySelector('.cookies');
 
 menuToggle.addEventListener('change', () => {
 	if (menuToggle.checked) {
@@ -22,6 +24,10 @@ const passwords = ["12345", "9851"];
 
 logme.addEventListener('click', (e) => {
   holder.style.display = 'block';
+})
+
+agree.addEventListener('click', (e) => {
+	cookies.style.display = 'none';
 })
 
 btns.addEventListener('click', (e) => {
